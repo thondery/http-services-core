@@ -1,0 +1,23 @@
+{
+  "name": "http-services-core",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/thondery/http-services-core.git",
+  "author": "thondery <thondery@163.com>",
+  "license": "MIT",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "query-string": "^5.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "codecov": "^3.0.0",
+    "mocha": "^3.5.3",
+    "nyc": "^10.1.2"
+  },
+  "scripts": {
+    "test": "nyc --report-dir=\"coverage/src\" mocha --reporter spec --bail --check-leaks tests/{,**/}*.test.js",
+    "test-ci": "nyc --report-dir=\"coverage/src\" mocha --reporter spec --check-leaks tests/{,**/}*.test.js",
+    "report-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov"
+  }
+}
