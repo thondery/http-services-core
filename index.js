@@ -110,7 +110,7 @@ exports.getStatusError = function (error) {
 }
 
 exports.statusToError = function (payload, error, message) {
-  const { status } = payload
+  const status = payload.Status || payload.status
   const info = {}
   info[error] = status.code > 0 ? status : null
   if (message) {

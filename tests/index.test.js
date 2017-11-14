@@ -217,7 +217,7 @@ describe('Test -> httpServices', () => {
     it('should to error', done => {
       let Response = {
         data: null,
-        status: {
+        Status: {
           code: 1024,
           message: 'Wraning Message!'
         }
